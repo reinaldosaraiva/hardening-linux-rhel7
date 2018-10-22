@@ -3,7 +3,11 @@
   hosts: TEMPLATE_RHEL75_4208023c-c261-1eb8-a189-2f43440ab57d
 
   tasks:
-     - name: Ola Mundo !
-       shell: echo "Ola Mundo!!"
+      - name: Ola Mundo !
+        shell: echo "Ola Mundo!!"
 
-     - shell: cat /etc/redhat-release
+      - debug:
+          msg: "%{{ ansible_hostname }}"
+
+      - debug:
+          msg: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
