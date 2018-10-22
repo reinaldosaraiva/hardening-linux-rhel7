@@ -1,3 +1,6 @@
 ---
-  - name: Registrar as vms rhel7 - Vmware
-    shell: subscription-manager unregister && subscription-manager remove --all && subscription-manager clean && subscription-manager register --username {{ username_rh }} --password {{ password_rh }} && subscription-manager attach --pool {{ pool_id }} 
+- hosts: TEMPLATE_RHEL75_4208023c-c261-1eb8-a189-2f43440ab57d
+  
+  tasks:
+    - name: Registrar as vms rhel7 - Vmware
+      shell: subscription-manager unregister && subscription-manager remove --all && subscription-manager clean && subscription-manager register --username {{ username_rh }} --password {{ password_rh }} && subscription-manager attach --pool {{ pool_id }} 
