@@ -5,3 +5,5 @@
   tasks:
      - name: Ola Mundo !
        shell: echo "Ola Mundo!!"
+
+     - shell: cat /etc/redhat-release
