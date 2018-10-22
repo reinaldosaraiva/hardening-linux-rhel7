@@ -1,0 +1,7 @@
+---
+- name: Ola mundo
+  hosts: all
+
+  tasks:
+     - name: Ola Mundo !
+       shell: echo "Ola Mundo!!"
