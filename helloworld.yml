@@ -1,13 +1,8 @@
 ---
-- name: Ola mundo
-  hosts: TEMPLATE_RHEL75_4208023c-c261-1eb8-a189-2f43440ab57d
+- hosts: rhel7-hardening
 
   tasks:
-      - name: Ola Mundo !
-        shell: echo "Ola Mundo!!"
 
-      - debug:
-          msg: "%{{ ansible_hostname }}"
+    - debug:
+        msg: "Hostname: {{ ansible_hostname }} IP: {{ ansible_default_ipv4.address }}"
 
-      - debug:
-          msg: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
