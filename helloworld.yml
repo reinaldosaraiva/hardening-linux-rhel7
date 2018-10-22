@@ -1,5 +1,5 @@
 ---
-- hosts: rhel7-hardening
+- hosts: all
 
   tasks:
 
