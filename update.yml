@@ -1,0 +1,8 @@
+---
+- name: RHEL | Install all updates
+  yum: 
+    name: "*"
+    state: latest
+  when: ansible_pkg_mgr == 'yum'
+  async: 3600
+  poll: 0

@@ -1,0 +1,11 @@
+---
+- hosts: all
+  vars:
+    username_rh: <USERNAME> 
+    password_rh: <PASSWORD>
+    pool_id: <POOL_ID>
+  tasks:
+    - name: Include file subscription-manager.yml 
+      import_tasks: subscription-manager.yml
+    - name: Include file update.yml
+      import_tasks: update.yml
